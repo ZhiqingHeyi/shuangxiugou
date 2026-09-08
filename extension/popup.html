@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <style>
+    body { width: 300px; margin: 0; padding: 14px; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 13px; color: #1e293b; background: #f8fafc; }
+    .header { display: flex; align-items: center; gap: 8px; margin-bottom: 12px; }
+    .icon { width: 28px; height: 28px; background: #10b981; color: #fff; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 900; }
+    .title { font-weight: 700; font-size: 15px; }
+    .card { background: #fff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 10px; margin-bottom: 10px; }
+    .stat { font-size: 11px; color: #64748b; }
+    .row { display: flex; justify-content: space-between; font-size: 11px; padding: 2px 0; }
+    .btn { display: block; width: 100%; text-align: center; background: #0f172a; color: #fff; padding: 8px 0; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 12px; box-sizing: border-box; }
+    .btn.ghost { background: #fff; color: #0f172a; border: 1px solid #cbd5e1; margin-bottom: 6px; }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="icon">休</div>
+    <div>
+      <div class="title">双休透镜</div>
+      <div style="font-size: 11px; color: #10b981; font-weight: 600;">网购实时工时友好检测</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stat">检测生效范围</div>
+    <div class="row"><span>京东</span><span style="color:#10b981;font-weight:600;">已开启</span></div>
+    <div class="row"><span>淘宝 / 天猫</span><span style="color:#10b981;font-weight:600;">已开启</span></div>
+    <div class="row"><span>拼多多</span><span style="color:#10b981;font-weight:600;">已开启</span></div>
+    <div class="stat" style="margin-top:6px;">命中库内品牌时，页面右下角弹出工时评级与双休平替提示。</div>
+  </div>
+
+  <div class="card">
+    <div class="stat">当前收录品牌条目</div>
+    <div id="count" style="font-weight:700; font-size:16px; color:#10b981;">—</div>
+  </div>
+
+  <a href="https://github.com/" target="_blank" class="btn ghost">提交新品牌 / 查看开源库</a>
+  <a href="http://127.0.0.1:4780/" target="_blank" class="btn">打开双休购完整官网</a>
+
+  <script src="data.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

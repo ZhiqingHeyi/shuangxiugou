@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "双休透镜 (WLB Lens) - 双休购购物助手",
+  "version": "1.0.0",
+  "description": "网购时一眼识别品牌双休友好度，支持良心企业，避雷单休血汗工厂。",
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "双休透镜",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.jd.com/*",
+        "*://item.taobao.com/*",
+        "*://detail.tmall.com/*",
+        "*://*.yangkeduo.com/*"
+      ],
+      "js": ["data.js", "content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
