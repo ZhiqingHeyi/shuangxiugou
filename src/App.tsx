@@ -132,7 +132,7 @@ export function App() {
               + 提交爆料 / 推荐
             </button>
             <a
-              href="https://github.com"
+              href="https://github.com/ZhiqingHeyi/shuangxiugou"
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center gap-1.5 text-xs sm:text-sm bg-slate-900 hover:bg-slate-800 text-white px-3 py-1.5 rounded-lg font-medium shadow-sm transition"
@@ -160,7 +160,7 @@ export function App() {
           </p>
 
           {/* 实时转移消费计数看板 */}
-          <div className="pt-4 max-w-xl mx-auto">
+          <div className="pt-4 max-w-xl mx-auto space-y-3">
             <div className="bg-slate-900 text-white rounded-2xl p-5 shadow-xl flex flex-col sm:flex-row items-center justify-between gap-4">
               <div className="text-left">
                 <div className="text-xs text-slate-400 font-medium">全网打工人已转移消费额 (脚投币票)</div>
@@ -178,6 +178,26 @@ export function App() {
                 <Receipt className="w-4 h-4" />
                 打卡并生成小票
               </button>
+            </div>
+
+            {/* 数据收录统计指标 */}
+            <div className="grid grid-cols-4 gap-2 text-center text-xs">
+              <div className="bg-white p-2.5 rounded-xl border border-slate-200 shadow-xs">
+                <div className="font-bold text-slate-900 text-base">{brands.length}</div>
+                <div className="text-slate-400 text-[11px]">收录品牌</div>
+              </div>
+              <div className="bg-emerald-50/60 p-2.5 rounded-xl border border-emerald-200 shadow-xs">
+                <div className="font-bold text-emerald-700 text-base">{brands.filter(b => b.tier === 'S' || b.tier === 'A').length}</div>
+                <div className="text-emerald-700/70 text-[11px]">双休红榜</div>
+              </div>
+              <div className="bg-amber-50/60 p-2.5 rounded-xl border border-amber-200 shadow-xs">
+                <div className="font-bold text-amber-700 text-base">{brands.filter(b => b.tier === 'B').length}</div>
+                <div className="text-amber-700/70 text-[11px]">大小周观察</div>
+              </div>
+              <div className="bg-rose-50/60 p-2.5 rounded-xl border border-rose-200 shadow-xs">
+                <div className="font-bold text-rose-700 text-base">{brands.filter(b => b.tier === 'C').length}</div>
+                <div className="text-rose-700/70 text-[11px]">避雷预警</div>
+              </div>
             </div>
           </div>
         </div>
@@ -658,7 +678,7 @@ export function App() {
             <span>- 守护劳动法与打工人休息权</span>
           </div>
           <div className="flex items-center gap-4 text-slate-600">
-            <a href="https://github.com" target="_blank" rel="noreferrer" className="hover:text-emerald-600">GitHub 仓库</a>
+            <a href="https://github.com/ZhiqingHeyi/shuangxiugou" target="_blank" rel="noreferrer" className="hover:text-emerald-600">GitHub 仓库</a>
             <button onClick={() => setShowContributeModal(true)} className="hover:text-emerald-600">提供数据</button>
             <span className="text-slate-300">|</span>
             <span>数据完全开源免责声明：仅作为消费参考</span>

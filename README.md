@@ -46,6 +46,17 @@ npm run build
 
 ---
 
+## 🌐 在线访问与 Vercel 一键部署
+
+本项目支持一键部署到 Vercel：
+
+1. 登录 [Vercel](https://vercel.com/)，选择 **Add New... → Project**。
+2. 导入 GitHub 仓库 `ZhiqingHeyi/shuangxiugou`。
+3. Framework Preset 选择 **Vite**，根目录保持默认，点击 **Deploy** 即可上线。
+4. 项目自带 `vercel.json` 自动处理单页应用路由重写与安全头。
+
+---
+
 ## ⚖️ 免责声明
 
 本项目所有数据均来源于公开司法裁判文书、各地劳动监察部门行政处罚公开信息、上市公司公开 ESG 报告及社区打工人多方交叉验证。数据仅供个人择业与日常消费偏好参考，不构成商业排他或绝对背书。
