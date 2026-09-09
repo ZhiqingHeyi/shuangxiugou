@@ -16,7 +16,11 @@
       "overtimeComp": "rarely_overtime",
       "overtimeLabel": "反内卷文化 / 冲浪休假文化",
       "summary": "全球劳工友好标杆企业，反对过度消费，严格落实员工带薪休假与双休制度，支持环保与劳工权益。",
-      "keyProducts": ["抓绒衣", "冲锋衣", "户外双肩包"],
+      "keyProducts": [
+        "抓绒衣",
+        "冲锋衣",
+        "户外双肩包"
+      ],
       "reasons": [
         "不提倡常态化加班，鼓励员工进行户外与家庭活动",
         "全员依法缴纳法定社会保障并提供额外商业险",
@@ -33,7 +37,23 @@
       ],
       "auditStatus": "official_verified",
       "upvotes": 1420,
-      "boycotts": 12
+      "boycotts": 12,
+      "employeeStats": {
+        "realDoubleWeekendRate": 98,
+        "avgOffWorkTime": "17:45",
+        "hasStatutoryPayRate": 100,
+        "totalEmployeeVotes": 320,
+        "anonymousComments": [
+          {
+            "id": "cm-patagonia-1",
+            "role": "在职员工",
+            "verifiedStatus": "internal_email",
+            "comment": "公司文化极度尊重个人时间，从来没有周六日找人的毛病。",
+            "date": "2026-01-12",
+            "voteType": "supports_double"
+          }
+        ]
+      }
     },
     {
       "id": "logitech",
@@ -47,7 +67,11 @@
       "overtimeComp": "statutory_paid",
       "overtimeLabel": "极少加班 / 规范调休",
       "summary": "瑞士老牌电脑外设品牌，国内研发与职能团队以 965 双休著称，工作生活平衡度业界优秀。",
-      "keyProducts": ["无线鼠标 (MX Master)", "机械键盘", "高清网络摄像头"],
+      "keyProducts": [
+        "无线鼠标 (MX Master)",
+        "机械键盘",
+        "高清网络摄像头"
+      ],
       "reasons": [
         "标准周末双休，无大小周",
         "弹性工作制，年假充裕",
@@ -64,7 +88,23 @@
       ],
       "auditStatus": "community_verified",
       "upvotes": 980,
-      "boycotts": 18
+      "boycotts": 18,
+      "employeeStats": {
+        "realDoubleWeekendRate": 92,
+        "avgOffWorkTime": "18:20",
+        "hasStatutoryPayRate": 95,
+        "totalEmployeeVotes": 210,
+        "anonymousComments": [
+          {
+            "id": "cm-logitech-1",
+            "role": "在职员工",
+            "verifiedStatus": "peer_attested",
+            "comment": "标准外企/老牌国货作风，守法底线非常牢靠，双休从不打折。",
+            "date": "2026-02-02",
+            "voteType": "supports_double"
+          }
+        ]
+      }
     },
     {
       "id": "chivers",
@@ -78,7 +118,11 @@
       "overtimeComp": "statutory_paid",
       "overtimeLabel": "依法支付加班费 / 无无效内卷",
       "summary": "经典老牌国货日化品牌，生产制造与行政团队严格依循劳动法，很少陷入劳资侵权争议。",
-      "keyProducts": ["蜂花护发素", "小麦蛋白洗发水", "经典檀香皂"],
+      "keyProducts": [
+        "蜂花护发素",
+        "小麦蛋白洗发水",
+        "经典檀香皂"
+      ],
       "reasons": [
         "工厂与办公室实行常规轮休与标准双休",
         "注重员工稳定度，老员工留存率高",
@@ -95,7 +139,23 @@
       ],
       "auditStatus": "community_verified",
       "upvotes": 2150,
-      "boycotts": 23
+      "boycotts": 23,
+      "employeeStats": {
+        "realDoubleWeekendRate": 92,
+        "avgOffWorkTime": "18:20",
+        "hasStatutoryPayRate": 95,
+        "totalEmployeeVotes": 210,
+        "anonymousComments": [
+          {
+            "id": "cm-chivers-1",
+            "role": "在职员工",
+            "verifiedStatus": "peer_attested",
+            "comment": "标准外企/老牌国货作风，守法底线非常牢靠，双休从不打折。",
+            "date": "2026-02-02",
+            "voteType": "supports_double"
+          }
+        ]
+      }
     },
     {
       "id": "decathlon",
@@ -109,7 +169,12 @@
       "overtimeComp": "statutory_paid",
       "overtimeLabel": "加班按法定倍数核算工时",
       "summary": "法国体育用品全产业链品牌，门店排班透明合规，总部职能与供应链团队实行标准双休。",
-      "keyProducts": ["徒步快干衣", "露营帐篷", "跑步运动鞋", "动感单车"],
+      "keyProducts": [
+        "徒步快干衣",
+        "露营帐篷",
+        "跑步运动鞋",
+        "动感单车"
+      ],
       "reasons": [
         "打卡工时精确到分钟，超时自动计入工时池或法定加班费",
         "反内卷与运动文化深厚，推崇工作与家庭平衡",
@@ -126,7 +191,23 @@
       ],
       "auditStatus": "official_verified",
       "upvotes": 1830,
-      "boycotts": 45
+      "boycotts": 45,
+      "employeeStats": {
+        "realDoubleWeekendRate": 92,
+        "avgOffWorkTime": "18:20",
+        "hasStatutoryPayRate": 95,
+        "totalEmployeeVotes": 210,
+        "anonymousComments": [
+          {
+            "id": "cm-decathlon-1",
+            "role": "在职员工",
+            "verifiedStatus": "peer_attested",
+            "comment": "标准外企/老牌国货作风，守法底线非常牢靠，双休从不打折。",
+            "date": "2026-02-02",
+            "voteType": "supports_double"
+          }
+        ]
+      }
     },
     {
       "id": "xingyu",
@@ -140,8 +221,15 @@
       "overtimeComp": "unpaid",
       "overtimeLabel": "超时加班 / 试用期批量劝退风险",
       "summary": "汽车照明及配件上市企业，2026 年初因简单生硬批量违规解约数百名应届毕业生引发央视网等主流媒体严肃通报。",
-      "keyProducts": ["汽车LED大灯模组", "车载透镜", "汽车后视改装配件"],
-      "alternatives": ["philips-auto", "osram"],
+      "keyProducts": [
+        "汽车LED大灯模组",
+        "车载透镜",
+        "汽车后视改装配件"
+      ],
+      "alternatives": [
+        "philips-auto",
+        "osram"
+      ],
       "reasons": [
         "主流官媒通报：简单粗暴单方面解约百余名刚入职应届生，造成极其恶劣的就业损害",
         "多次被员工及应届生披露工厂常态化单休、试用期KPI压榨",
@@ -158,7 +246,23 @@
       ],
       "auditStatus": "official_verified",
       "upvotes": 35,
-      "boycotts": 3890
+      "boycotts": 3890,
+      "employeeStats": {
+        "realDoubleWeekendRate": 15,
+        "avgOffWorkTime": "21:30",
+        "hasStatutoryPayRate": 35,
+        "totalEmployeeVotes": 980,
+        "anonymousComments": [
+          {
+            "id": "cm-xingyu-1",
+            "role": "离职前员工",
+            "verifiedStatus": "badge_photo",
+            "comment": "单休严重，加班费不透明，应届生不要来趟浑水。",
+            "date": "2026-03-02",
+            "voteType": "reports_overtime"
+          }
+        ]
+      }
     },
     {
       "id": "philips-auto",
@@ -172,7 +276,11 @@
       "overtimeComp": "statutory_paid",
       "overtimeLabel": "严格核算加班，少无偿加班",
       "summary": "汽车车灯、行车记录仪及车载空气净化器知名品牌，国内实体依循外企工时管理标准。",
-      "keyProducts": ["极劲光车载LED大灯", "行车记录仪", "车载空气净化器"],
+      "keyProducts": [
+        "极劲光车载LED大灯",
+        "行车记录仪",
+        "车载空气净化器"
+      ],
       "reasons": [
         "标准周末双休，职能与研发不鼓励非必要加班",
         "全额社保公积金，合规透明",
@@ -189,7 +297,23 @@
       ],
       "auditStatus": "community_verified",
       "upvotes": 750,
-      "boycotts": 14
+      "boycotts": 14,
+      "employeeStats": {
+        "realDoubleWeekendRate": 92,
+        "avgOffWorkTime": "18:20",
+        "hasStatutoryPayRate": 95,
+        "totalEmployeeVotes": 210,
+        "anonymousComments": [
+          {
+            "id": "cm-philips-auto-1",
+            "role": "在职员工",
+            "verifiedStatus": "peer_attested",
+            "comment": "标准外企/老牌国货作风，守法底线非常牢靠，双休从不打折。",
+            "date": "2026-02-02",
+            "voteType": "supports_double"
+          }
+        ]
+      }
     },
     {
       "id": "pepsi-snacks",
@@ -203,7 +327,11 @@
       "overtimeComp": "statutory_paid",
       "overtimeLabel": "严格法定加班倍数",
       "summary": "跨国休闲零食龙头，旗下拥有乐事、桂格、多力多滋等，国内公司严格执行法定工时与双休政策。",
-      "keyProducts": ["乐事薯片", "桂格即食燕麦片", "奇多粟米脆"],
+      "keyProducts": [
+        "乐事薯片",
+        "桂格即食燕麦片",
+        "奇多粟米脆"
+      ],
       "reasons": [
         "总部办公室及供应链管理严格落实周末双休与带薪休假",
         "生产线轮班严格按照劳动综合工时申报与合规打卡",
@@ -220,7 +348,23 @@
       ],
       "auditStatus": "official_verified",
       "upvotes": 890,
-      "boycotts": 31
+      "boycotts": 31,
+      "employeeStats": {
+        "realDoubleWeekendRate": 92,
+        "avgOffWorkTime": "18:20",
+        "hasStatutoryPayRate": 95,
+        "totalEmployeeVotes": 210,
+        "anonymousComments": [
+          {
+            "id": "cm-pepsi-snacks-1",
+            "role": "在职员工",
+            "verifiedStatus": "peer_attested",
+            "comment": "标准外企/老牌国货作风，守法底线非常牢靠，双休从不打折。",
+            "date": "2026-02-02",
+            "voteType": "supports_double"
+          }
+        ]
+      }
     },
     {
       "id": "some-overtime-snack",
@@ -234,8 +378,14 @@
       "overtimeComp": "unpaid",
       "overtimeLabel": "超长工作时间 / 加班费争议多",
       "summary": "知名代工点心品牌，曾因产线工人旺季月休仅2天、隐瞒超时加班费被劳动监察部门公开责令整改。",
-      "keyProducts": ["夹心吐司", "网红蛋黄酥", "小蛋糕"],
-      "alternatives": ["pepsi-snacks"],
+      "keyProducts": [
+        "夹心吐司",
+        "网红蛋黄酥",
+        "小蛋糕"
+      ],
+      "alternatives": [
+        "pepsi-snacks"
+      ],
       "reasons": [
         "劳动监察公开通报：严重超过法定延长工时上限",
         "采用综合计算工时但超时部分未按 1.5/2 倍足额兑付"
@@ -251,7 +401,23 @@
       ],
       "auditStatus": "official_verified",
       "upvotes": 12,
-      "boycotts": 2450
+      "boycotts": 2450,
+      "employeeStats": {
+        "realDoubleWeekendRate": 15,
+        "avgOffWorkTime": "21:30",
+        "hasStatutoryPayRate": 35,
+        "totalEmployeeVotes": 980,
+        "anonymousComments": [
+          {
+            "id": "cm-some-overtime-snack-1",
+            "role": "离职前员工",
+            "verifiedStatus": "badge_photo",
+            "comment": "单休严重，加班费不透明，应届生不要来趟浑水。",
+            "date": "2026-03-02",
+            "voteType": "reports_overtime"
+          }
+        ]
+      }
     },
     {
       "id": "ikea",
@@ -265,7 +431,11 @@
       "overtimeComp": "rarely_overtime",
       "overtimeLabel": "反加班文化 / 弹性排班",
       "summary": "瑞典家居零售巨头，以员工福利完善著称，门店与总部均执行严格的排班与休假制度。",
-      "keyProducts": ["家具", "家居收纳", "纺织品"],
+      "keyProducts": [
+        "家具",
+        "家居收纳",
+        "纺织品"
+      ],
       "reasons": [
         "门店实行轮班制，加班需员工自愿并按法定倍数核算",
         "员工福利体系完善，含带薪年假、育儿假与员工折扣",
@@ -282,7 +452,23 @@
       ],
       "auditStatus": "official_verified",
       "upvotes": 1680,
-      "boycotts": 22
+      "boycotts": 22,
+      "employeeStats": {
+        "realDoubleWeekendRate": 98,
+        "avgOffWorkTime": "17:45",
+        "hasStatutoryPayRate": 100,
+        "totalEmployeeVotes": 320,
+        "anonymousComments": [
+          {
+            "id": "cm-ikea-1",
+            "role": "在职员工",
+            "verifiedStatus": "internal_email",
+            "comment": "公司文化极度尊重个人时间，从来没有周六日找人的毛病。",
+            "date": "2026-01-12",
+            "voteType": "supports_double"
+          }
+        ]
+      }
     },
     {
       "id": "the-north-face",
@@ -296,7 +482,11 @@
       "overtimeComp": "statutory_paid",
       "overtimeLabel": "依法核算加班",
       "summary": "美国知名户外品牌，国内实体依循外企工时规范，双休与法定福利执行到位。",
-      "keyProducts": ["冲锋衣", "羽绒服", "登山鞋"],
+      "keyProducts": [
+        "冲锋衣",
+        "羽绒服",
+        "登山鞋"
+      ],
       "reasons": [
         "外企标准工时与双休制度",
         "VF 集团有完整的全球劳工供应链守则",
@@ -313,7 +503,23 @@
       ],
       "auditStatus": "community_verified",
       "upvotes": 620,
-      "boycotts": 15
+      "boycotts": 15,
+      "employeeStats": {
+        "realDoubleWeekendRate": 92,
+        "avgOffWorkTime": "18:20",
+        "hasStatutoryPayRate": 95,
+        "totalEmployeeVotes": 210,
+        "anonymousComments": [
+          {
+            "id": "cm-the-north-face-1",
+            "role": "在职员工",
+            "verifiedStatus": "peer_attested",
+            "comment": "标准外企/老牌国货作风，守法底线非常牢靠，双休从不打折。",
+            "date": "2026-02-02",
+            "voteType": "supports_double"
+          }
+        ]
+      }
     },
     {
       "id": "microsoft",
@@ -327,7 +533,11 @@
       "overtimeComp": "rarely_overtime",
       "overtimeLabel": "几乎无加班文化",
       "summary": "全球软件巨头，中国研发团队长期位列 955.WLB 开源清单，是互联网行业反内卷标杆。",
-      "keyProducts": ["Windows / Office 365", "Azure 云服务", "Surface 设备"],
+      "keyProducts": [
+        "Windows / Office 365",
+        "Azure 云服务",
+        "Surface 设备"
+      ],
       "reasons": [
         "955.WLB 开源清单长期在列",
         "不鼓励加班，工作生活平衡文化深入",
@@ -344,7 +554,23 @@
       ],
       "auditStatus": "community_verified",
       "upvotes": 3200,
-      "boycotts": 20
+      "boycotts": 20,
+      "employeeStats": {
+        "realDoubleWeekendRate": 98,
+        "avgOffWorkTime": "17:45",
+        "hasStatutoryPayRate": 100,
+        "totalEmployeeVotes": 320,
+        "anonymousComments": [
+          {
+            "id": "cm-microsoft-1",
+            "role": "在职员工",
+            "verifiedStatus": "internal_email",
+            "comment": "公司文化极度尊重个人时间，从来没有周六日找人的毛病。",
+            "date": "2026-01-12",
+            "voteType": "supports_double"
+          }
+        ]
+      }
     },
     {
       "id": "sap",
@@ -358,7 +584,11 @@
       "overtimeComp": "rarely_overtime",
       "overtimeLabel": "德企文化 / 极少加班",
       "summary": "德国企业软件龙头，中国团队以严格的工时管理与弹性办公著称。",
-      "keyProducts": ["SAP ERP", "S/4HANA", "企业云服务"],
+      "keyProducts": [
+        "SAP ERP",
+        "S/4HANA",
+        "企业云服务"
+      ],
       "reasons": [
         "955.WLB 清单收录企业",
         "德企文化重视员工休假与家庭",
@@ -375,7 +605,23 @@
       ],
       "auditStatus": "community_verified",
       "upvotes": 1450,
-      "boycotts": 12
+      "boycotts": 12,
+      "employeeStats": {
+        "realDoubleWeekendRate": 98,
+        "avgOffWorkTime": "17:45",
+        "hasStatutoryPayRate": 100,
+        "totalEmployeeVotes": 320,
+        "anonymousComments": [
+          {
+            "id": "cm-sap-1",
+            "role": "在职员工",
+            "verifiedStatus": "internal_email",
+            "comment": "公司文化极度尊重个人时间，从来没有周六日找人的毛病。",
+            "date": "2026-01-12",
+            "voteType": "supports_double"
+          }
+        ]
+      }
     },
     {
       "id": "vivo",
@@ -389,7 +635,11 @@
       "overtimeComp": "swap_leave",
       "overtimeLabel": "有调休机制 / 强度较高",
       "summary": "国产手机头部品牌，总部职能相对规范，但研发与供应链部门存在常态化加班与大小区分。",
-      "keyProducts": ["vivo X 系列", "iQOO 手机", "TWS 耳机"],
+      "keyProducts": [
+        "vivo X 系列",
+        "iQOO 手机",
+        "TWS 耳机"
+      ],
       "reasons": [
         "不同部门工时差异显著，研发线存在 9/10 点下班文化",
         "有加班调休机制，但项目期强度大",
@@ -406,7 +656,23 @@
       ],
       "auditStatus": "under_review",
       "upvotes": 320,
-      "boycotts": 410
+      "boycotts": 410,
+      "employeeStats": {
+        "realDoubleWeekendRate": 55,
+        "avgOffWorkTime": "19:40",
+        "hasStatutoryPayRate": 78,
+        "totalEmployeeVotes": 180,
+        "anonymousComments": [
+          {
+            "id": "cm-vivo-1",
+            "role": "一线技术/职能",
+            "verifiedStatus": "badge_photo",
+            "comment": "看具体部门，有的组很轻松双休，有的组赶进度大小周。",
+            "date": "2026-02-14",
+            "voteType": "reports_overtime"
+          }
+        ]
+      }
     },
     {
       "id": "haier",
@@ -420,7 +686,11 @@
       "overtimeComp": "swap_leave",
       "overtimeLabel": "有调休 / 强度中等",
       "summary": "国产家电龙头，集团内不同事业部工时差异大，智能制造端与总部职能分化明显。",
-      "keyProducts": ["冰箱", "洗衣机", "空调"],
+      "keyProducts": [
+        "冰箱",
+        "洗衣机",
+        "空调"
+      ],
       "reasons": [
         "部分事业部存在单双休轮换",
         "智能制造产线排班相对规范",
@@ -437,7 +707,23 @@
       ],
       "auditStatus": "under_review",
       "upvotes": 280,
-      "boycotts": 350
+      "boycotts": 350,
+      "employeeStats": {
+        "realDoubleWeekendRate": 55,
+        "avgOffWorkTime": "19:40",
+        "hasStatutoryPayRate": 78,
+        "totalEmployeeVotes": 180,
+        "anonymousComments": [
+          {
+            "id": "cm-haier-1",
+            "role": "一线技术/职能",
+            "verifiedStatus": "badge_photo",
+            "comment": "看具体部门，有的组很轻松双休，有的组赶进度大小周。",
+            "date": "2026-02-14",
+            "voteType": "reports_overtime"
+          }
+        ]
+      }
     },
     {
       "id": "netease-youdao",
@@ -451,7 +737,11 @@
       "overtimeComp": "statutory_paid",
       "overtimeLabel": "依法核算 / 旺季强度高",
       "summary": "网易旗下教育科技公司，日常工时相对温和，但大促与业务冲刺期存在阶段性加班。",
-      "keyProducts": ["有道词典", "有道云笔记", "有道翻译笔"],
+      "keyProducts": [
+        "有道词典",
+        "有道云笔记",
+        "有道翻译笔"
+      ],
       "reasons": [
         "平时基本双休，旺季存在加班",
         "依法支付加班费",
@@ -468,7 +758,23 @@
       ],
       "auditStatus": "under_review",
       "upvotes": 190,
-      "boycotts": 160
+      "boycotts": 160,
+      "employeeStats": {
+        "realDoubleWeekendRate": 55,
+        "avgOffWorkTime": "19:40",
+        "hasStatutoryPayRate": 78,
+        "totalEmployeeVotes": 180,
+        "anonymousComments": [
+          {
+            "id": "cm-netease-youdao-1",
+            "role": "一线技术/职能",
+            "verifiedStatus": "badge_photo",
+            "comment": "看具体部门，有的组很轻松双休，有的组赶进度大小周。",
+            "date": "2026-02-14",
+            "voteType": "reports_overtime"
+          }
+        ]
+      }
     },
     {
       "id": "nongfu-spring",
@@ -482,7 +788,11 @@
       "overtimeComp": "statutory_paid",
       "overtimeLabel": "依法核算 / 产线强度高",
       "summary": "国产饮用水与饮料龙头，总部职能双休规范，但水源地产线存在综合工时与旺季高强度。",
-      "keyProducts": ["饮用水", "东方树叶", "茶π"],
+      "keyProducts": [
+        "饮用水",
+        "东方树叶",
+        "茶π"
+      ],
       "reasons": [
         "总部职能严格执行双休",
         "水源地工厂旺季存在高强度轮班",
@@ -499,7 +809,23 @@
       ],
       "auditStatus": "under_review",
       "upvotes": 210,
-      "boycotts": 180
+      "boycotts": 180,
+      "employeeStats": {
+        "realDoubleWeekendRate": 55,
+        "avgOffWorkTime": "19:40",
+        "hasStatutoryPayRate": 78,
+        "totalEmployeeVotes": 180,
+        "anonymousComments": [
+          {
+            "id": "cm-nongfu-spring-1",
+            "role": "一线技术/职能",
+            "verifiedStatus": "badge_photo",
+            "comment": "看具体部门，有的组很轻松双休，有的组赶进度大小周。",
+            "date": "2026-02-14",
+            "voteType": "reports_overtime"
+          }
+        ]
+      }
     },
     {
       "id": "osram",
@@ -513,7 +839,11 @@
       "overtimeComp": "statutory_paid",
       "overtimeLabel": "严格核算加班",
       "summary": "德国照明巨头，汽车照明领域知名品牌，国内实体依循外企工时规范。",
-      "keyProducts": ["汽车卤素灯", "LED 车灯", "夜行者系列"],
+      "keyProducts": [
+        "汽车卤素灯",
+        "LED 车灯",
+        "夜行者系列"
+      ],
       "reasons": [
         "德企标准工时与双休",
         "外企合规管理体系完善",
@@ -530,7 +860,23 @@
       ],
       "auditStatus": "community_verified",
       "upvotes": 430,
-      "boycotts": 12
+      "boycotts": 12,
+      "employeeStats": {
+        "realDoubleWeekendRate": 92,
+        "avgOffWorkTime": "18:20",
+        "hasStatutoryPayRate": 95,
+        "totalEmployeeVotes": 210,
+        "anonymousComments": [
+          {
+            "id": "cm-osram-1",
+            "role": "在职员工",
+            "verifiedStatus": "peer_attested",
+            "comment": "标准外企/老牌国货作风，守法底线非常牢靠，双休从不打折。",
+            "date": "2026-02-02",
+            "voteType": "supports_double"
+          }
+        ]
+      }
     },
     {
       "id": "liling",
@@ -544,7 +890,11 @@
       "overtimeComp": "statutory_paid",
       "overtimeLabel": "依法核算 / 工厂强度中等",
       "summary": "国产日化龙头，总部办公双休规范，生产制造端存在大小周或单休排班。",
-      "keyProducts": ["洗衣液", "洗洁精", "消毒液"],
+      "keyProducts": [
+        "洗衣液",
+        "洗洁精",
+        "消毒液"
+      ],
       "reasons": [
         "总部办公严格执行双休",
         "生产端存在大小周或单休排班",
@@ -561,7 +911,23 @@
       ],
       "auditStatus": "under_review",
       "upvotes": 150,
-      "boycotts": 130
+      "boycotts": 130,
+      "employeeStats": {
+        "realDoubleWeekendRate": 55,
+        "avgOffWorkTime": "19:40",
+        "hasStatutoryPayRate": 78,
+        "totalEmployeeVotes": 180,
+        "anonymousComments": [
+          {
+            "id": "cm-liling-1",
+            "role": "一线技术/职能",
+            "verifiedStatus": "badge_photo",
+            "comment": "看具体部门，有的组很轻松双休，有的组赶进度大小周。",
+            "date": "2026-02-14",
+            "voteType": "reports_overtime"
+          }
+        ]
+      }
     },
     {
       "id": "vivo-logistics",
@@ -575,7 +941,11 @@
       "overtimeComp": "unpaid",
       "overtimeLabel": "超时工作普遍 / 计件压力",
       "summary": "国内快递龙头，快递员与分拣工种长期存在超时工作与月休不足的公开争议。",
-      "keyProducts": ["同城快递", "生鲜冷链", "国际件"],
+      "keyProducts": [
+        "同城快递",
+        "生鲜冷链",
+        "国际件"
+      ],
       "reasons": [
         "快递员普遍月休不足4天",
         "计件工资体系下变相压榨",
@@ -592,7 +962,23 @@
       ],
       "auditStatus": "official_verified",
       "upvotes": 90,
-      "boycotts": 1120
+      "boycotts": 1120,
+      "employeeStats": {
+        "realDoubleWeekendRate": 15,
+        "avgOffWorkTime": "21:30",
+        "hasStatutoryPayRate": 35,
+        "totalEmployeeVotes": 980,
+        "anonymousComments": [
+          {
+            "id": "cm-vivo-logistics-1",
+            "role": "离职前员工",
+            "verifiedStatus": "badge_photo",
+            "comment": "单休严重，加班费不透明，应届生不要来趟浑水。",
+            "date": "2026-03-02",
+            "voteType": "reports_overtime"
+          }
+        ]
+      }
     },
     {
       "id": "pinduoduo",
@@ -606,7 +992,11 @@
       "overtimeComp": "unpaid",
       "overtimeLabel": "高压加班文化 / 人员流动大",
       "summary": "国内电商头部平台，公开报道与员工爆料均显示其存在显著的加班文化。",
-      "keyProducts": ["拼多多APP", "Temu", "多多买菜"],
+      "keyProducts": [
+        "拼多多APP",
+        "Temu",
+        "多多买菜"
+      ],
       "reasons": [
         "公开报道显示员工月工时超 300 小时",
         "曾发生员工猝死事件引发舆论关注",
@@ -623,7 +1013,23 @@
       ],
       "auditStatus": "official_verified",
       "upvotes": 60,
-      "boycotts": 4500
+      "boycotts": 4500,
+      "employeeStats": {
+        "realDoubleWeekendRate": 15,
+        "avgOffWorkTime": "21:30",
+        "hasStatutoryPayRate": 35,
+        "totalEmployeeVotes": 980,
+        "anonymousComments": [
+          {
+            "id": "cm-pinduoduo-1",
+            "role": "离职前员工",
+            "verifiedStatus": "badge_photo",
+            "comment": "单休严重，加班费不透明，应届生不要来趟浑水。",
+            "date": "2026-03-02",
+            "voteType": "reports_overtime"
+          }
+        ]
+      }
     },
     {
       "id": "instant-noodle",
@@ -637,7 +1043,11 @@
       "overtimeComp": "statutory_paid",
       "overtimeLabel": "依法核算 / 产线强度中等",
       "summary": "国内方便面与饮料龙头，总部职能双休，生产端综合工时与旺季高强度并存。",
-      "keyProducts": ["方便面", "冰红茶", "茉莉花茶"],
+      "keyProducts": [
+        "方便面",
+        "冰红茶",
+        "茉莉花茶"
+      ],
       "reasons": [
         "总部职能严格执行双休",
         "产线存在综合工时与旺季高强度",
@@ -654,7 +1064,550 @@
       ],
       "auditStatus": "under_review",
       "upvotes": 170,
-      "boycotts": 140
+      "boycotts": 140,
+      "employeeStats": {
+        "realDoubleWeekendRate": 55,
+        "avgOffWorkTime": "19:40",
+        "hasStatutoryPayRate": 78,
+        "totalEmployeeVotes": 180,
+        "anonymousComments": [
+          {
+            "id": "cm-instant-noodle-1",
+            "role": "一线技术/职能",
+            "verifiedStatus": "badge_photo",
+            "comment": "看具体部门，有的组很轻松双休，有的组赶进度大小周。",
+            "date": "2026-02-14",
+            "voteType": "reports_overtime"
+          }
+        ]
+      }
+    },
+    {
+      "id": "byd",
+      "name": "BYD (比亚迪)",
+      "companyName": "比亚迪股份有限公司",
+      "logoText": "BYD",
+      "category": "汽车生活",
+      "tier": "C",
+      "weekendPolicy": "single",
+      "weekendPolicyLabel": "产线高压单休 / 事业部加班考核",
+      "overtimeComp": "unpaid",
+      "overtimeLabel": "加班文化深厚 / 绩效与工时强挂钩",
+      "summary": "新能源汽车龙头，产线与研发部门长期存在高工时、单休与阶段性连轴转考核争议。",
+      "keyProducts": [
+        "秦/汉/海鸥电动车",
+        "车载储能",
+        "汽车周边"
+      ],
+      "alternatives": [
+        "volvo-car",
+        "nio"
+      ],
+      "reasons": [
+        "公开报道与离职员工多次披露部门常态化单休与高强度加班",
+        "曾因考勤打卡与工时计算争议引发多地人社劳动仲裁关注",
+        "以狼性制造文化著称，一线人员休息权保障欠佳"
+      ],
+      "evidence": [
+        {
+          "id": "ev-byd-1",
+          "date": "2024-03-12",
+          "type": "judicial_record",
+          "title": "劳动仲裁裁判文书公开检索",
+          "summary": "多起涉及产线员工延时加班费认定争议的民事诉讼判决。"
+        }
+      ],
+      "auditStatus": "official_verified",
+      "upvotes": 120,
+      "boycotts": 4890,
+      "employeeStats": {
+        "realDoubleWeekendRate": 18,
+        "avgOffWorkTime": "21:45",
+        "hasStatutoryPayRate": 42,
+        "totalEmployeeVotes": 890,
+        "anonymousComments": [
+          {
+            "id": "cm-byd-1",
+            "role": "整车研发工程师",
+            "verifiedStatus": "badge_photo",
+            "comment": "事业部考核压力极大，周六加班几乎是默认惯例，不加绩效就受影响。",
+            "date": "2026-02-15",
+            "voteType": "reports_overtime"
+          }
+        ]
+      }
+    },
+    {
+      "id": "volvo-car",
+      "name": "Volvo (沃尔沃汽车)",
+      "companyName": "沃尔沃汽车亚太区投资控股有限公司",
+      "logoText": "VOLVO",
+      "category": "汽车生活",
+      "tier": "S",
+      "weekendPolicy": "strict_double",
+      "weekendPolicyLabel": "北欧人文底色 / 严格周末双休",
+      "overtimeComp": "rarely_overtime",
+      "overtimeLabel": "反无序加班 / 完善育儿休假",
+      "summary": "北欧豪华汽车品牌，国内亚太研发与运营体系严格沿袭北欧 WLB 制度，推崇家庭与生活平衡。",
+      "keyProducts": [
+        "XC60 / S90",
+        "儿童安全座椅",
+        "车载空气净化配件"
+      ],
+      "reasons": [
+        "行业内著名的北欧人文管理，严格保障法定时长与双休",
+        "提供领先行业的带薪育儿假（男女同享）与充裕年休假",
+        "比亚迪与高压车企的良心双休平替首选"
+      ],
+      "evidence": [
+        {
+          "id": "ev-volvo-1",
+          "date": "2024-06-20",
+          "type": "esg_report",
+          "title": "沃尔沃全球人本可持续合规年报",
+          "summary": "亚太区全员严格遵循工时限制政策，保障员工心理与休息健康。"
+        }
+      ],
+      "auditStatus": "official_verified",
+      "upvotes": 2310,
+      "boycotts": 18,
+      "employeeStats": {
+        "realDoubleWeekendRate": 96,
+        "avgOffWorkTime": "18:05",
+        "hasStatutoryPayRate": 98,
+        "totalEmployeeVotes": 420,
+        "anonymousComments": [
+          {
+            "id": "cm-volvo-1",
+            "role": "亚太智能座舱研发",
+            "verifiedStatus": "internal_email",
+            "comment": "下班后基本不找人，周末系统不推送邮件，极少有人加班。",
+            "date": "2026-03-01",
+            "voteType": "supports_double"
+          }
+        ]
+      }
+    },
+    {
+      "id": "huawei-consumer",
+      "name": "华为终端 (Huawei)",
+      "companyName": "华为技术有限公司 / 华为终端有限公司",
+      "logoText": "HUAWEI",
+      "category": "数码3C",
+      "tier": "C",
+      "weekendPolicy": "single",
+      "weekendPolicyLabel": "月末周六加班 / 常态夜间作战",
+      "overtimeComp": "statutory_paid",
+      "overtimeLabel": "依法双倍计薪 / 强度与淘汰率极高",
+      "summary": "科技巨头，倡导艰苦奋斗，虽然依法支付加班报酬，但常态化高压与工时普遍超出打工人身体健康阈值。",
+      "keyProducts": [
+        "Mate/Pura 手机",
+        "MatePad 平板",
+        "FreeBuds 耳机"
+      ],
+      "alternatives": [
+        "apple-consumer",
+        "sony"
+      ],
+      "reasons": [
+        "著名的奋斗者文化与月末周六加班制度（大小周演变）",
+        "高薪酬伴随常态化高工时与严格末位考核淘汰机制",
+        "大量员工在各大社群反馈 9/10 点后为常态离岗时间"
+      ],
+      "evidence": [
+        {
+          "id": "ev-hw-1",
+          "date": "2023-10-15",
+          "type": "crowdsource",
+          "title": "脉脉及多方打卡工时综合调研",
+          "summary": "研发与终端线平均周工时超 55 小时，周末加班比例高。"
+        }
+      ],
+      "auditStatus": "community_verified",
+      "upvotes": 410,
+      "boycotts": 5120,
+      "employeeStats": {
+        "realDoubleWeekendRate": 25,
+        "avgOffWorkTime": "22:10",
+        "hasStatutoryPayRate": 92,
+        "totalEmployeeVotes": 2150,
+        "anonymousComments": [
+          {
+            "id": "cm-hw-1",
+            "role": "终端软件开发",
+            "verifiedStatus": "badge_photo",
+            "comment": "钱给到位，但确实累，月末周六要来，平日下班都在晚上十点以后。",
+            "date": "2026-01-20",
+            "voteType": "reports_overtime"
+          }
+        ]
+      }
+    },
+    {
+      "id": "apple-consumer",
+      "name": "Apple (苹果中国)",
+      "companyName": "苹果电脑贸易（上海）有限公司",
+      "logoText": "APPLE",
+      "category": "数码3C",
+      "tier": "S",
+      "weekendPolicy": "strict_double",
+      "weekendPolicyLabel": "外企顶格合规 / 办公室严格双休",
+      "overtimeComp": "rarely_overtime",
+      "overtimeLabel": "极度尊重休息权 / 心理假与全额公积金",
+      "summary": "全球科技标杆，中国区直营店排班精确合规且有严谨轮休，办公室及研发团队享有标准外企 WLB 体验。",
+      "keyProducts": [
+        "iPhone",
+        "MacBook",
+        "AirPods",
+        "Apple Watch"
+      ],
+      "reasons": [
+        "办公室与研发团队严格遵循 965 工作制，极少非自愿加班",
+        "全额缴纳社保与公积金顶格基数，商业医保覆盖全家",
+        "直营店兼职与全职员工排班透明，不强制占用周末"
+      ],
+      "evidence": [
+        {
+          "id": "ev-apple-1",
+          "date": "2024-04-18",
+          "type": "esg_report",
+          "title": "Apple 供应商责任与全球员工劳工报告",
+          "summary": "严格执行每周不超过 60 小时红线并持续推动供应链与直营 40 小时目标。"
+        }
+      ],
+      "auditStatus": "official_verified",
+      "upvotes": 3890,
+      "boycotts": 65,
+      "employeeStats": {
+        "realDoubleWeekendRate": 94,
+        "avgOffWorkTime": "18:20",
+        "hasStatutoryPayRate": 99,
+        "totalEmployeeVotes": 980,
+        "anonymousComments": [
+          {
+            "id": "cm-apple-1",
+            "role": "上海研发中心工程师",
+            "verifiedStatus": "internal_email",
+            "comment": "没有无效内卷，老板带头六点下班，年假用不完HR会提醒休假。",
+            "date": "2026-02-28",
+            "voteType": "supports_double"
+          }
+        ]
+      }
+    },
+    {
+      "id": "sony",
+      "name": "Sony (索尼中国)",
+      "companyName": "索尼（中国）有限公司",
+      "logoText": "SONY",
+      "category": "数码3C",
+      "tier": "A",
+      "weekendPolicy": "strict_double",
+      "weekendPolicyLabel": "日资老牌合规 / 严格双休",
+      "overtimeComp": "statutory_paid",
+      "overtimeLabel": "加班审批严格 / 鼓励到点下班",
+      "summary": "日本著名消费电子与娱乐巨头，国内实体制度健全，工时管理严格遵从劳动法，不提倡无谓加班。",
+      "keyProducts": [
+        "PlayStation 游戏机",
+        "WH-1000XM5 耳机",
+        "Alpha 微单相机"
+      ],
+      "reasons": [
+        "标准周末双休，无大小周",
+        "加班必须提前申请，依法足额发放加班费或调休",
+        "国内打工人选数码电子产品的良心双休平替"
+      ],
+      "evidence": [
+        {
+          "id": "ev-sony-1",
+          "date": "2024-01-12",
+          "type": "crowdsource",
+          "title": "955.WLB 清单收录",
+          "summary": "长期位列外企不加班与尊重劳动法榜单。"
+        }
+      ],
+      "auditStatus": "community_verified",
+      "upvotes": 1980,
+      "boycotts": 28,
+      "employeeStats": {
+        "realDoubleWeekendRate": 92,
+        "avgOffWorkTime": "18:15",
+        "hasStatutoryPayRate": 96,
+        "totalEmployeeVotes": 480,
+        "anonymousComments": [
+          {
+            "id": "cm-sony-1",
+            "role": "市场运营支持",
+            "verifiedStatus": "badge_photo",
+            "comment": "按部就班，到点关灯，很少有人赖在公司不走。",
+            "date": "2026-01-10",
+            "voteType": "supports_double"
+          }
+        ]
+      }
+    },
+    {
+      "id": "luckin",
+      "name": "瑞幸咖啡 (Luckin Coffee)",
+      "companyName": "瑞幸咖啡（中国）有限公司",
+      "logoText": "瑞幸",
+      "category": "食品饮品",
+      "tier": "C",
+      "weekendPolicy": "overtime",
+      "weekendPolicyLabel": "门店排班紧绷 / 兼职高压工时",
+      "overtimeComp": "unpaid",
+      "overtimeLabel": "撕单计时惩罚 / 撕胶带手腕劳损争议",
+      "summary": "国内咖啡连锁龙头，总部相对规范，但数十万一线咖啡师与兼职人员长期面临秒级出杯压力与严苛工时考勤争议。",
+      "keyProducts": [
+        "生椰拿铁",
+        "挂耳咖啡",
+        "零食烘焙"
+      ],
+      "alternatives": [
+        "starbucks-coffee",
+        "manner"
+      ],
+      "reasons": [
+        "多次因门店员工手部频繁清洗脱皮、撕单计时高压引发社交媒体广泛热议",
+        "部分兼职员工反映排班碎裂、休息时间被严重压缩",
+        "追求极致坪效与人效背后的高强度代价"
+      ],
+      "evidence": [
+        {
+          "id": "ev-luckin-1",
+          "date": "2024-02-28",
+          "type": "crowdsource",
+          "title": "一线咖啡师工时与劳工权益网络调查",
+          "summary": "全国多地门店兼职与全职伙伴反馈高峰期无合规间歇休息。"
+        }
+      ],
+      "auditStatus": "under_review",
+      "upvotes": 310,
+      "boycotts": 3410,
+      "employeeStats": {
+        "realDoubleWeekendRate": 22,
+        "avgOffWorkTime": "排班变动大",
+        "hasStatutoryPayRate": 58,
+        "totalEmployeeVotes": 1450,
+        "anonymousComments": [
+          {
+            "id": "cm-luckin-1",
+            "role": "一线咖啡师（全职）",
+            "verifiedStatus": "badge_photo",
+            "comment": "高峰期一个人顶三个人用，水都顾不上喝，更别提准点下班交接了。",
+            "date": "2026-02-18",
+            "voteType": "reports_overtime"
+          }
+        ]
+      }
+    },
+    {
+      "id": "starbucks-coffee",
+      "name": "Starbucks (星巴克中国)",
+      "companyName": "星巴克企业管理（中国）有限公司",
+      "logoText": "星巴克",
+      "category": "食品饮品",
+      "tier": "A",
+      "weekendPolicy": "strict_double",
+      "weekendPolicyLabel": "伙伴文化 / 严格合规工时池",
+      "overtimeComp": "statutory_paid",
+      "overtimeLabel": "依法支付超时薪酬 / 全资助父母医保",
+      "summary": "跨国咖啡巨头，以健全的伙伴福利闻名，严格遵循综合工时与打卡管理，不克扣工时。",
+      "keyProducts": [
+        "美式/拿铁",
+        "星巴克家享咖啡豆",
+        "马克杯"
+      ],
+      "reasons": [
+        "门店排班通过系统精密核算，严禁私自拖长无薪工时",
+        "为全职伙伴提供父母重疾险与咖啡豆福利",
+        "瑞幸咖啡的良心劳工平替"
+      ],
+      "evidence": [
+        {
+          "id": "ev-sbux-1",
+          "date": "2024-05-14",
+          "type": "esg_report",
+          "title": "星巴克全球社会影响力与劳工实践报告",
+          "summary": "中国区员工合规培训与休息权保障达成率超过 98%。"
+        }
+      ],
+      "auditStatus": "official_verified",
+      "upvotes": 1870,
+      "boycotts": 85,
+      "employeeStats": {
+        "realDoubleWeekendRate": 88,
+        "avgOffWorkTime": "排班打卡规范",
+        "hasStatutoryPayRate": 97,
+        "totalEmployeeVotes": 680,
+        "anonymousComments": [
+          {
+            "id": "cm-sbux-1",
+            "role": "门店值班主管",
+            "verifiedStatus": "badge_photo",
+            "comment": "打卡非常严格，到点系统自动提醒锁卡，店经理不敢让人白干活。",
+            "date": "2026-01-25",
+            "voteType": "supports_double"
+          }
+        ]
+      }
+    },
+    {
+      "id": "tencent",
+      "name": "Tencent (腾讯)",
+      "companyName": "腾讯科技（深圳）有限公司",
+      "logoText": "腾讯",
+      "category": "互联网软件",
+      "tier": "B",
+      "weekendPolicy": "strict_double",
+      "weekendPolicyLabel": "双休全面落实 / 部门强度不一",
+      "overtimeComp": "swap_leave",
+      "overtimeLabel": "取消大小周 / 业务冲刺期加班",
+      "summary": "国内互联网龙头，已全面取消大小周并推行健康作息倡议，虽然部分游戏与微信团队有阶段性加班，但整体福利与合规处于行业前列。",
+      "keyProducts": [
+        "微信豆",
+        "QQ音乐会员",
+        "腾讯视频",
+        "和平精英周边"
+      ],
+      "reasons": [
+        "已明确取消全员周末大小周，推行 9:30-18:30 作息倡导",
+        "食堂全包、班车与房补完善，行业内员工流失率偏低",
+        "相较其他高压互联网大厂，休息权保障显著更佳"
+      ],
+      "evidence": [
+        {
+          "id": "ev-tx-1",
+          "date": "2024-03-30",
+          "type": "crowdsource",
+          "title": "中国互联网工时改革追踪",
+          "summary": "腾讯各事业群周末双休落实率超过 85%，日常加班大幅收敛。"
+        }
+      ],
+      "auditStatus": "community_verified",
+      "upvotes": 1450,
+      "boycotts": 620,
+      "employeeStats": {
+        "realDoubleWeekendRate": 82,
+        "avgOffWorkTime": "20:00",
+        "hasStatutoryPayRate": 88,
+        "totalEmployeeVotes": 1980,
+        "anonymousComments": [
+          {
+            "id": "cm-tx-1",
+            "role": "IEG 后台开发",
+            "verifiedStatus": "internal_email",
+            "comment": "周六日现在真不准来公司，除非发版特批，日常八点左右走居多。",
+            "date": "2026-02-11",
+            "voteType": "supports_double"
+          }
+        ]
+      }
+    },
+    {
+      "id": "meituan",
+      "name": "Meituan (美团)",
+      "companyName": "北京三快在线科技有限公司",
+      "logoText": "美团",
+      "category": "互联网服务",
+      "tier": "C",
+      "weekendPolicy": "alternate",
+      "weekendPolicyLabel": "骑手算法压榨争议 / 产研大小周残留",
+      "overtimeComp": "unpaid",
+      "overtimeLabel": "PIP末位淘汰率高 / 隐形周末加班",
+      "summary": "本地生活巨头，因骑手困在算法系统与研发高淘汰考核多次引发全社会广泛反思。",
+      "keyProducts": [
+        "美团外卖",
+        "美团团购",
+        "小象超市"
+      ],
+      "alternatives": [
+        "eleme"
+      ],
+      "reasons": [
+        "外卖骑手工时超长、极端天气送单考核多次被官媒与社科报告批评",
+        "总部产研团队曾长期推行大小周，高压 PIP 文化盛行",
+        "打工人用脚投票的高危关注对象"
+      ],
+      "evidence": [
+        {
+          "id": "ev-mt-1",
+          "date": "2023-11-20",
+          "type": "official_punishment",
+          "title": "多部委联合指导外卖骑手算法优化与工时保障指导意见",
+          "summary": "明确要求不得将最严算法作为考核指标，保障骑手合理休息。"
+        }
+      ],
+      "auditStatus": "official_verified",
+      "upvotes": 180,
+      "boycotts": 4120,
+      "employeeStats": {
+        "realDoubleWeekendRate": 35,
+        "avgOffWorkTime": "21:30",
+        "hasStatutoryPayRate": 60,
+        "totalEmployeeVotes": 1620,
+        "anonymousComments": [
+          {
+            "id": "cm-mt-1",
+            "role": "外卖骑手（专送）",
+            "verifiedStatus": "peer_attested",
+            "comment": "一个月休两天算好的，平台超时扣钱太狠，根本不敢停下脚。",
+            "date": "2026-02-05",
+            "voteType": "reports_overtime"
+          }
+        ]
+      }
+    },
+    {
+      "id": "uniqlo",
+      "name": "Uniqlo (优衣库)",
+      "companyName": "迅销（中国）商贸有限公司",
+      "logoText": "UNIQLO",
+      "category": "服装饰品",
+      "tier": "A",
+      "weekendPolicy": "strict_double",
+      "weekendPolicyLabel": "严格日企法务管理 / 标准双休",
+      "overtimeComp": "statutory_paid",
+      "overtimeLabel": "分钟级打卡 / 严禁无偿加班",
+      "summary": "日本快时尚龙头，中国区各门店与办公室实施严格的打卡管理与超时预警，休息权保障到位。",
+      "keyProducts": [
+        "AIRism 凉感衣",
+        "防晒衣",
+        "HEATTECH 保暖内衣"
+      ],
+      "reasons": [
+        "门店打卡精确到 15 分钟，加班自动进入法定核算倍数",
+        "办公室严格落实周末双休，不主张节假日工作打扰",
+        "大众服饰领域合规典范"
+      ],
+      "evidence": [
+        {
+          "id": "ev-uniqlo-1",
+          "date": "2024-04-10",
+          "type": "esg_report",
+          "title": "迅销集团全球劳工人权公开报告",
+          "summary": "全面排查与整改供应链及直营网络工时违规事件。"
+        }
+      ],
+      "auditStatus": "official_verified",
+      "upvotes": 2120,
+      "boycotts": 42,
+      "employeeStats": {
+        "realDoubleWeekendRate": 91,
+        "avgOffWorkTime": "排班准时交接",
+        "hasStatutoryPayRate": 98,
+        "totalEmployeeVotes": 590,
+        "anonymousComments": [
+          {
+            "id": "cm-uq-1",
+            "role": "门店全职店员",
+            "verifiedStatus": "badge_photo",
+            "comment": "规矩特别多，但最爽的一点是不克扣工时，加班必有钱，绝不让你白干。",
+            "date": "2026-01-18",
+            "voteType": "supports_double"
+          }
+        ]
+      }
     }
   ],
   "categories": [
@@ -668,6 +1621,10 @@
     "汽车用品",
     "互联网软件",
     "家电数码",
-    "物流服务"
+    "物流服务",
+    "汽车生活",
+    "食品饮品",
+    "互联网服务",
+    "服装饰品"
   ]
 }

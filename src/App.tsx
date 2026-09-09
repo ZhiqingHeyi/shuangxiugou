@@ -10,15 +10,17 @@ import {
   ChevronRight, 
   Building, 
   Receipt, 
-  CheckCircle2,
+  CheckCircle2, 
   Filter,
-  Clock
+  Clock,
+  UserCheck
 } from 'lucide-react';
 import confetti from 'canvas-confetti';
 import { INITIAL_BRANDS, CATEGORIES } from './data';
 import type { BrandItem, WlbTier } from './types';
 import { AnimatedCounter } from './components/AnimatedCounter';
 import { ReceiptModal } from './components/ReceiptModal';
+import { EmployeeVoteModal } from './components/EmployeeVoteModal';
 
 export function App() {
   const [brands, setBrands] = useState<BrandItem[]>(INITIAL_BRANDS);
@@ -34,6 +36,7 @@ export function App() {
   const [ticketBrand, setTicketBrand] = useState<BrandItem | null>(null);
   const [ticketAmount] = useState(199);
   const [showContributeModal, setShowContributeModal] = useState(false);
+  const [votingEmployeeBrand, setVotingEmployeeBrand] = useState<BrandItem | null>(null);
 
   // 筛选过滤
   const filteredBrands = brands.filter((brand) => {
@@ -68,6 +71,68 @@ export function App() {
   const openTicketGenerator = (brand: BrandItem) => {
     setTicketBrand(brand);
     setShowTicketModal(true);
+  };
+
+  const handleEmployeeVoteSubmit = (
+    brandId: string,
+    data: {
+      role: string;
+      weekendRating: number;
+      offWorkTime: string;
+      statutoryPay: boolean;
+      comment: string;
+    }
+  ) => {
+    setBrands((prev) =>
+      prev.map((b) => {
+        if (b.id !== brandId) return b;
+        const currentStats = b.employeeStats || {
+          realDoubleWeekendRate: 70,
+          avgOffWorkTime: '19:00',
+          hasStatutoryPayRate: 80,
+          totalEmployeeVotes: 0,
+          anonymousComments: [],
+        };
+        const total = currentStats.totalEmployeeVotes + 1;
+        const newRate = Math.round(
+          (currentStats.realDoubleWeekendRate * currentStats.totalEmployeeVotes + data.weekendRating) / total
+        );
+        const newPayRate = Math.round(
+          (currentStats.hasStatutoryPayRate * currentStats.totalEmployeeVotes + (data.statutoryPay ? 100 : 0)) / total
+        );
+
+        const newComment = data.comment.trim()
+          ? [
+              {
+                id: `cm-${Date.now()}`,
+                role: data.role,
+                verifiedStatus: 'peer_attested' as const,
+                comment: data.comment,
+                date: new Date().toISOString().split('T')[0],
+                voteType: data.weekendRating >= 60 ? ('supports_double' as const) : ('reports_overtime' as const),
+              },
+              ...currentStats.anonymousComments,
+            ]
+          : currentStats.anonymousComments;
+
+        return {
+          ...b,
+          employeeStats: {
+            realDoubleWeekendRate: newRate,
+            avgOffWorkTime: data.offWorkTime,
+            hasStatutoryPayRate: newPayRate,
+            totalEmployeeVotes: total,
+            anonymousComments: newComment,
+          },
+        };
+      })
+    );
+
+    confetti({
+      particleCount: 70,
+      spread: 80,
+      origin: { y: 0.5 },
+    });
   };
 
   const completeTicketVote = () => {
@@ -146,19 +211,28 @@ export function App() {
       </header>
 
       {/* 主体大标语与统计看板 */}
-      <section className="bg-gradient-to-b from-white to-slate-50 border-b border-slate-200 py-12 px-4">
-        <div className="max-w-4xl mx-auto text-center space-y-4">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs font-semibold">
+      <section className="relative overflow-hidden bg-gradient-to-b from-white via-slate-50/80 to-slate-100/60 border-b border-slate-200/80 py-14 px-4">
+        {/* 背景光斑效果 */}
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-64 bg-gradient-to-b from-emerald-100/30 to-transparent blur-3xl pointer-events-none" />
+
+        <div className="max-w-4xl mx-auto text-center space-y-5 relative">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-50/90 border border-emerald-300 text-emerald-800 text-xs font-semibold shadow-xs">
             <ShieldCheck className="w-4 h-4 text-emerald-600" />
-            把老板考核你的 KPI，变成打工人考核老板的货币选票
+            <span>把老板考核你的 KPI，变成打工人考核老板的货币选票</span>
           </div>
-          <h1 className="text-3xl sm:text-5xl font-black text-slate-900 tracking-tight leading-tight">
-            用每一次下单，支持真正双休的良心企业
+
+          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-slate-950 tracking-tight leading-[1.15]">
+            让消费者与在职员工，
+            <br />
+            <span className="bg-gradient-to-r from-emerald-600 via-teal-600 to-emerald-500 bg-clip-text text-transparent">
+              真正重新考核每一家企业
+            </span>
           </h1>
-          <p className="text-slate-600 text-sm sm:text-base max-w-2xl mx-auto">
-            汇聚官方劳动仲裁记录、ESG 公开报告与全网打工人真实交叉印证。
+
+          <p className="text-slate-600 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
+            打通司法仲裁公开事实、ESG 报告、<strong className="text-slate-900 font-semibold">企业员工匿名工牌实测</strong> 与 <strong className="text-slate-900 font-semibold">消费者货币投票</strong>。
             <br className="hidden sm:inline" />
-            买东西前查一眼，避开单休血汗工厂，把订单留给尊重员工的守法品牌。
+            买东西前查一眼，避开单休与违约企业，把每一笔订单留给守法尊严者。
           </p>
 
           {/* 实时转移消费计数看板 */}
@@ -302,9 +376,40 @@ export function App() {
                     </div>
                   </div>
 
-                  <p className="text-xs text-slate-600 line-clamp-2 leading-relaxed">
-                    {brand.summary}
-                  </p>
+                  {/* 员工内部真实选票仪表盘 */}
+                  {brand.employeeStats && (
+                    <div className="bg-slate-900 text-slate-100 rounded-xl p-3 text-xs space-y-2 border border-slate-800 shadow-inner">
+                      <div className="flex items-center justify-between text-[11px] pb-1 border-b border-slate-800">
+                        <span className="font-bold flex items-center gap-1 text-emerald-400">
+                          <UserCheck className="w-3.5 h-3.5" /> 内部员工实测指数
+                        </span>
+                        <span className="text-slate-400 font-mono">
+                          {brand.employeeStats.totalEmployeeVotes} 人已投票
+                        </span>
+                      </div>
+                      <div className="grid grid-cols-2 gap-2 text-[11px]">
+                        <div>
+                          <div className="text-slate-400">真实双休率:</div>
+                          <div className={`font-mono font-bold text-sm ${brand.employeeStats.realDoubleWeekendRate >= 80 ? 'text-emerald-400' : brand.employeeStats.realDoubleWeekendRate >= 50 ? 'text-amber-400' : 'text-rose-400'}`}>
+                            {brand.employeeStats.realDoubleWeekendRate}%
+                          </div>
+                        </div>
+                        <div>
+                          <div className="text-slate-400">平均离岗/下班:</div>
+                          <div className="font-mono font-bold text-sm text-slate-200">
+                            {brand.employeeStats.avgOffWorkTime}
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* 最新匿名证言 */}
+                      {brand.employeeStats.anonymousComments.length > 0 && (
+                        <div className="pt-1 text-[11px] text-slate-300 italic line-clamp-1 border-t border-slate-800/80">
+                          “{brand.employeeStats.anonymousComments[0].comment}”
+                        </div>
+                      )}
+                    </div>
+                  )}
 
                   {/* 核心产品品类标签 */}
                   <div className="flex flex-wrap gap-1.5 pt-1">
@@ -375,6 +480,14 @@ export function App() {
                   </div>
 
                   <div className="flex items-center gap-2">
+                    <button
+                      onClick={() => setVotingEmployeeBrand(brand)}
+                      className="text-slate-600 hover:text-emerald-700 font-medium inline-flex items-center gap-1 bg-white hover:bg-emerald-50 px-2 py-1 rounded-lg border border-slate-200"
+                      title="我是内部员工/离职员工，我要实名/匿名投票"
+                    >
+                      <UserCheck className="w-3.5 h-3.5 text-emerald-600" />
+                      <span>员工投票</span>
+                    </button>
                     <button
                       onClick={() => openTicketGenerator(brand)}
                       className="text-slate-600 hover:text-emerald-700 font-medium inline-flex items-center gap-1"
@@ -472,6 +585,64 @@ export function App() {
                 </div>
               </div>
 
+              {/* 员工真实评测与证言区 */}
+              {selectedBrand.employeeStats && (
+                <div className="bg-slate-900 text-white rounded-2xl p-4 space-y-3">
+                  <div className="flex items-center justify-between">
+                    <div className="font-bold text-emerald-400 flex items-center gap-1.5 text-xs">
+                      <UserCheck className="w-4 h-4" />
+                      <span>内部员工匿名投票汇总 ({selectedBrand.employeeStats.totalEmployeeVotes} 票)</span>
+                    </div>
+                    <button
+                      onClick={() => {
+                        setVotingEmployeeBrand(selectedBrand);
+                      }}
+                      className="text-[11px] bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold px-2.5 py-1 rounded-lg transition"
+                    >
+                      我是内部员工，我要投票
+                    </button>
+                  </div>
+
+                  <div className="grid grid-cols-3 gap-2 text-center text-xs">
+                    <div className="bg-slate-800/80 p-2 rounded-xl">
+                      <div className="text-slate-400 text-[10px]">真实双休率</div>
+                      <div className="font-mono font-bold text-emerald-400 text-sm">
+                        {selectedBrand.employeeStats.realDoubleWeekendRate}%
+                      </div>
+                    </div>
+                    <div className="bg-slate-800/80 p-2 rounded-xl">
+                      <div className="text-slate-400 text-[10px]">平均离岗时间</div>
+                      <div className="font-mono font-bold text-slate-200 text-sm">
+                        {selectedBrand.employeeStats.avgOffWorkTime}
+                      </div>
+                    </div>
+                    <div className="bg-slate-800/80 p-2 rounded-xl">
+                      <div className="text-slate-400 text-[10px]">法定加班费兑付</div>
+                      <div className="font-mono font-bold text-teal-400 text-sm">
+                        {selectedBrand.employeeStats.hasStatutoryPayRate}%
+                      </div>
+                    </div>
+                  </div>
+
+                  {selectedBrand.employeeStats.anonymousComments.length > 0 && (
+                    <div className="space-y-1.5 pt-1">
+                      <div className="text-[11px] text-slate-400 font-semibold">内部员工现场证言：</div>
+                      <div className="space-y-1.5 max-h-36 overflow-y-auto pr-1">
+                        {selectedBrand.employeeStats.anonymousComments.map((cm) => (
+                          <div key={cm.id} className="bg-slate-800/60 p-2.5 rounded-xl border border-slate-700/50 text-xs space-y-1">
+                            <div className="flex justify-between items-center text-[10px] text-slate-400">
+                              <span className="font-bold text-slate-300">{cm.role}</span>
+                              <span className="font-mono">{cm.date}</span>
+                            </div>
+                            <p className="text-slate-200 leading-normal">“{cm.comment}”</p>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                </div>
+              )}
+
               {/* 替代品引导 */}
               {selectedBrand.tier === 'C' && selectedBrand.alternatives && (
                 <div className="p-4 bg-gradient-to-r from-emerald-50 to-teal-50 rounded-xl border border-emerald-300 text-xs space-y-2.5">
@@ -531,6 +702,15 @@ export function App() {
           amount={ticketAmount}
           onClose={() => setShowTicketModal(false)}
           onComplete={completeTicketVote}
+        />
+      )}
+
+      {/* 员工实名/匿名投票 Modal */}
+      {votingEmployeeBrand && (
+        <EmployeeVoteModal
+          brand={votingEmployeeBrand}
+          onClose={() => setVotingEmployeeBrand(null)}
+          onSubmit={handleEmployeeVoteSubmit}
         />
       )}
 

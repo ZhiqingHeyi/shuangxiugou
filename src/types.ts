@@ -16,6 +16,22 @@ export interface EvidenceRecord {
   caseNumber?: string;
 }
 
+// 员工真实工作状态与投票
+export interface EmployeeVoteStats {
+  realDoubleWeekendRate: number; // 员工认定的真实双休率 (0 - 100)%
+  avgOffWorkTime: string; // 员工平均下班时间 e.g. "18:30"
+  hasStatutoryPayRate: number; // 加班费依法足额发放率
+  totalEmployeeVotes: number; // 员工总票数
+  anonymousComments: Array<{
+    id: string;
+    role: string; // e.g. "产线工人" | "研发工程师" | "职能支持" | "销售运营"
+    verifiedStatus: 'internal_email' | 'badge_photo' | 'peer_attested';
+    comment: string;
+    date: string;
+    voteType: 'supports_double' | 'reports_overtime';
+  }>;
+}
+
 export interface BrandItem {
   id: string;
   name: string;
@@ -35,4 +51,6 @@ export interface BrandItem {
   auditStatus: AuditStatus;
   upvotes: number;
   boycotts: number;
+  // 双轨投票与员工真实评测
+  employeeStats?: EmployeeVoteStats;
 }
