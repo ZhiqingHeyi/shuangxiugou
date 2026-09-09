@@ -11,11 +11,14 @@ import {
   Building, 
   Receipt, 
   CheckCircle2,
-  Filter
+  Filter,
+  Clock
 } from 'lucide-react';
 import confetti from 'canvas-confetti';
 import { INITIAL_BRANDS, CATEGORIES } from './data';
 import type { BrandItem, WlbTier } from './types';
+import { AnimatedCounter } from './components/AnimatedCounter';
+import { ReceiptModal } from './components/ReceiptModal';
 
 export function App() {
   const [brands, setBrands] = useState<BrandItem[]>(INITIAL_BRANDS);
@@ -29,9 +32,8 @@ export function App() {
   const [userVoteHistory, setUserVoteHistory] = useState<Record<string, 'up' | 'down'>>({});
   const [showTicketModal, setShowTicketModal] = useState(false);
   const [ticketBrand, setTicketBrand] = useState<BrandItem | null>(null);
-  const [ticketAmount, setTicketAmount] = useState(199);
+  const [ticketAmount] = useState(199);
   const [showContributeModal, setShowContributeModal] = useState(false);
-  const [copySuccess, setCopySuccess] = useState(false);
 
   // 筛选过滤
   const filteredBrands = brands.filter((brand) => {
@@ -82,33 +84,33 @@ export function App() {
     switch (tier) {
       case 'S':
         return (
-          <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-bold bg-emerald-100 text-emerald-800 border border-emerald-300">
-            <Sparkles className="w-3 h-3 text-emerald-600" /> S级 · 标杆模范
+          <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg text-xs font-black tracking-wide bg-emerald-50 text-emerald-800 border-2 border-emerald-500 shadow-xs uppercase">
+            <Sparkles className="w-3.5 h-3.5 text-emerald-600" /> S级 · 标杆模范
           </span>
         );
       case 'A':
         return (
-          <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-bold bg-green-100 text-green-800 border border-green-300">
-            <ShieldCheck className="w-3.5 h-3.5 text-green-600" /> A级 · 合规双休
+          <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg text-xs font-black tracking-wide bg-teal-50 text-teal-800 border-2 border-teal-500 shadow-xs uppercase">
+            <ShieldCheck className="w-3.5 h-3.5 text-teal-600" /> A级 · 合规双休
           </span>
         );
       case 'B':
         return (
-          <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-bold bg-amber-100 text-amber-800 border border-amber-300">
+          <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg text-xs font-black tracking-wide bg-amber-50 text-amber-900 border-2 border-amber-500 shadow-xs uppercase">
             <HelpCircle className="w-3.5 h-3.5 text-amber-600" /> B级 · 存疑/大小周
           </span>
         );
       case 'C':
         return (
-          <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-bold bg-rose-100 text-rose-800 border border-rose-300">
-            <AlertTriangle className="w-3.5 h-3.5 text-rose-600" /> C级 · 严重单休/通报
+          <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg text-xs font-black tracking-wide bg-rose-50 text-rose-900 border-2 border-rose-500 shadow-xs uppercase">
+            <AlertTriangle className="w-3.5 h-3.5 text-rose-600" /> C级 · 避雷预警
           </span>
         );
     }
   };
 
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-800 flex flex-col">
+    <div className="min-h-screen bg-[#f8fafc] text-slate-800 flex flex-col bg-noise selection:bg-emerald-500 selection:text-white">
       {/* 顶部导航 */}
       <header className="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-slate-200">
         <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
@@ -165,7 +167,7 @@ export function App() {
               <div className="text-left">
                 <div className="text-xs text-slate-400 font-medium">全网打工人已转移消费额 (脚投币票)</div>
                 <div className="text-2xl sm:text-3xl font-mono font-black text-emerald-400">
-                  ¥ {transferredAmount.toLocaleString()}
+                  <AnimatedCounter value={transferredAmount} />
                 </div>
               </div>
               <button
@@ -266,10 +268,12 @@ export function App() {
             return (
               <div
                 key={brand.id}
-                className={`bg-white rounded-2xl border transition-all hover:shadow-md flex flex-col justify-between overflow-hidden ${
+                className={`bg-white rounded-2xl border transition-all duration-200 hover:-translate-y-1 hover:shadow-lg flex flex-col justify-between overflow-hidden relative group ${
                   brand.tier === 'C'
-                    ? 'border-rose-200 bg-rose-50/20'
-                    : 'border-slate-200'
+                    ? 'border-rose-300 bg-gradient-to-b from-rose-50/40 to-white shadow-rose-500/5'
+                    : brand.tier === 'S'
+                    ? 'border-emerald-300 bg-gradient-to-b from-emerald-50/30 to-white shadow-emerald-500/5'
+                    : 'border-slate-200/80 shadow-slate-900/5'
                 }`}
               >
                 <div className="p-5 space-y-3.5">
@@ -446,37 +450,58 @@ export function App() {
               <div className="space-y-2.5">
                 <div className="text-xs font-bold text-slate-800 flex items-center gap-1.5">
                   <ShieldCheck className="w-4 h-4 text-emerald-600" />
-                  公开查验与证据链记录
+                  公开查验与事实证据链 (Timeline)
                 </div>
-                {selectedBrand.evidence.map((ev) => (
-                  <div key={ev.id} className="p-3 bg-slate-50 rounded-xl border border-slate-200 text-xs space-y-1">
-                    <div className="flex items-center justify-between text-slate-400 text-[11px]">
-                      <span>{ev.date}</span>
-                      <span className="bg-slate-200 px-1.5 py-0.5 rounded text-slate-700">
-                        {ev.type === 'official_punishment' ? '官方通报' : ev.type === 'judicial_record' ? '司法裁判' : 'ESG报告/众包'}
-                      </span>
+                <div className="space-y-2 border-l-2 border-slate-200 pl-3 ml-1">
+                  {selectedBrand.evidence.map((ev) => (
+                    <div key={ev.id} className="relative p-3 bg-slate-50 rounded-xl border border-slate-200 text-xs space-y-1">
+                      <div className="absolute -left-[19px] top-3.5 w-2 h-2 rounded-full bg-slate-400 ring-4 ring-white" />
+                      <div className="flex items-center justify-between text-slate-400 text-[11px]">
+                        <span className="flex items-center gap-1 font-mono">
+                          <Clock className="w-3 h-3" />
+                          {ev.date}
+                        </span>
+                        <span className="bg-slate-200/80 px-2 py-0.5 rounded text-slate-700 font-medium">
+                          {ev.type === 'official_punishment' ? '官方处罚/通报' : ev.type === 'judicial_record' ? '司法裁判文书' : 'ESG报告/众包'}
+                        </span>
+                      </div>
+                      <div className="font-bold text-slate-900">{ev.title}</div>
+                      <p className="text-slate-600 leading-relaxed">{ev.summary}</p>
                     </div>
-                    <div className="font-semibold text-slate-800">{ev.title}</div>
-                    <p className="text-slate-600">{ev.summary}</p>
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
 
               {/* 替代品引导 */}
               {selectedBrand.tier === 'C' && selectedBrand.alternatives && (
-                <div className="p-4 bg-emerald-50 rounded-xl border border-emerald-200 text-xs space-y-2">
-                  <div className="font-bold text-emerald-900">推荐良心平替商品：</div>
-                  <div className="text-slate-600">
-                    不给违法违约企业输送利润，以下品牌经过核验严格落实双休：
+                <div className="p-4 bg-gradient-to-r from-emerald-50 to-teal-50 rounded-xl border border-emerald-300 text-xs space-y-2.5">
+                  <div className="font-black text-emerald-950 flex items-center gap-1.5">
+                    <CheckCircle2 className="w-4 h-4 text-emerald-600" />
+                    <span>打工人用脚投票推荐：良心双休平替品牌</span>
                   </div>
-                  <div className="flex flex-wrap gap-2">
+                  <div className="text-slate-600 leading-normal">
+                    不给违法违规与高压单休企业贡献利润，建议优先将消费预算转向以下落实双休的替代品牌：
+                  </div>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-1">
                     {selectedBrand.alternatives.map((altId) => {
                       const alt = brands.find((b) => b.id === altId);
                       if (!alt) return null;
                       return (
-                        <div key={alt.id} className="bg-white border border-emerald-300 p-2 rounded-lg text-emerald-800 font-medium">
-                          {alt.name}（{alt.weekendPolicyLabel}）
-                        </div>
+                        <button
+                          key={alt.id}
+                          onClick={() => setSelectedBrand(alt)}
+                          className="bg-white hover:bg-emerald-50/80 border border-emerald-300/80 p-2.5 rounded-xl text-left transition flex items-center justify-between group shadow-xs"
+                        >
+                          <div>
+                            <div className="font-bold text-slate-900 text-xs group-hover:text-emerald-700 transition">
+                              {alt.name}
+                            </div>
+                            <div className="text-[11px] text-emerald-700 font-medium">
+                              {alt.tier}级 · {alt.weekendPolicyLabel}
+                            </div>
+                          </div>
+                          <ChevronRight className="w-4 h-4 text-slate-400 group-hover:text-emerald-600 transition" />
+                        </button>
                       );
                     })}
                   </div>
@@ -501,92 +526,12 @@ export function App() {
 
       {/* 社交小票生成器 Modal */}
       {showTicketModal && ticketBrand && (
-        <div className="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-4">
-          <div className="bg-white rounded-2xl max-w-sm w-full shadow-2xl border border-slate-200 overflow-hidden">
-            <div className="p-6 space-y-4">
-              <div className="flex justify-between items-center">
-                <span className="text-xs font-bold uppercase text-slate-400 tracking-wider">打工人用脚投票凭据</span>
-                <button
-                  onClick={() => setShowTicketModal(false)}
-                  className="text-slate-400 hover:text-slate-600 text-sm font-bold"
-                >
-                  ✕
-                </button>
-              </div>
-
-              {/* 热敏小票卡片样式 */}
-              <div className="bg-amber-50/80 border-2 border-dashed border-amber-300 rounded-xl p-5 font-mono text-slate-800 space-y-3 text-xs shadow-inner">
-                <div className="text-center pb-2 border-b border-dashed border-amber-300 space-y-1">
-                  <div className="text-sm font-black tracking-tight">★ 双休购 · 反向考核小票 ★</div>
-                  <div className="text-[10px] text-slate-500">NO. WLB-{new Date().getTime().toString().slice(-8)}</div>
-                </div>
-
-                <div className="space-y-1 text-[11px]">
-                  <div className="flex justify-between">
-                    <span className="text-slate-500">考核执行官:</span>
-                    <span className="font-bold">清醒打工人 #7709</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-slate-500">考核目标:</span>
-                    <span className="font-bold truncate max-w-[150px]">{ticketBrand.name}</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-slate-500">企业双休评级:</span>
-                    <span className="font-bold">{ticketBrand.tier} 级 ({ticketBrand.weekendPolicyLabel})</span>
-                  </div>
-                </div>
-
-                <div className="py-2 border-y border-dashed border-amber-300 space-y-1">
-                  <div className="flex justify-between items-center">
-                    <span>转移/奖励消费金额:</span>
-                    <span className="text-sm font-black text-emerald-700">¥ {ticketAmount}</span>
-                  </div>
-                  <div className="text-[10px] text-slate-500">
-                    {ticketBrand.tier === 'C'
-                      ? '已扣除该违规企业预算，转入良心双休平替'
-                      : '用订单奖励双休守法企业，支持员工不加班'}
-                  </div>
-                </div>
-
-                <div className="text-center pt-1 text-[10px] text-slate-600 font-sans italic">
-                  “老板考核你的KPI，你的钱包考核老板的良心”
-                </div>
-              </div>
-
-              {/* 金额调整输入 */}
-              <div className="flex items-center gap-2">
-                <span className="text-xs text-slate-500">本次消费预算:</span>
-                <input
-                  type="number"
-                  value={ticketAmount}
-                  onChange={(e) => setTicketAmount(Math.max(1, Number(e.target.value)))}
-                  className="flex-1 bg-slate-50 border border-slate-200 rounded-lg px-2.5 py-1 text-xs font-mono font-bold"
-                />
-                <span className="text-xs text-slate-500">元</span>
-              </div>
-
-              <div className="flex gap-2 pt-2">
-                <button
-                  onClick={() => {
-                    const text = `【双休购 · 反向考核小票】\n考核目标：${ticketBrand.name}\n工时评级：${ticketBrand.tier}级 (${ticketBrand.weekendPolicyLabel})\n已转移/奖励消费：¥${ticketAmount}\n“老板考核你的KPI，你的钱包考核老板的良心”\n数据查验来自开源双休购！`;
-                    navigator.clipboard.writeText(text);
-                    setCopySuccess(true);
-                    setTimeout(() => setCopySuccess(false), 2000);
-                  }}
-                  className="px-3 py-2.5 rounded-xl border border-slate-200 bg-slate-50 hover:bg-slate-100 text-slate-700 text-xs font-semibold transition"
-                >
-                  {copySuccess ? '已复制文字' : '复制小票文本'}
-                </button>
-                <button
-                  onClick={completeTicketVote}
-                  className="flex-1 bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold py-2.5 rounded-xl transition flex items-center justify-center gap-1 shadow-md shadow-emerald-600/20"
-                >
-                  <CheckCircle2 className="w-4 h-4" /> 确认打卡并记录
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
+        <ReceiptModal
+          brand={ticketBrand}
+          amount={ticketAmount}
+          onClose={() => setShowTicketModal(false)}
+          onComplete={completeTicketVote}
+        />
       )}
 
       {/* 提交推荐/爆料 Modal */}
